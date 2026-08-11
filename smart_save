@@ -1,0 +1,49 @@
+# SaveSmart — Personal Savings Companion
+
+SaveSmart is a goal-based savings app that turns a big financial target into a small, scheduled daily/weekly/monthly habit. Set a goal, get an automatically calculated contribution plan, and stay motivated with progress tracking, streaks, and milestone alerts.
+
+## Features
+
+- Guided, multi-step onboarding and savings-goal setup
+- Automatic installment calculation based on target amount, timeline, and chosen frequency
+- Home dashboard with goal progress, savings growth trend, and recent activity log
+- Streak tracking and milestone insights to reinforce consistent saving
+- Google Sign-In via Firebase Authentication
+
+## Tech Stack
+
+- **React** + **TypeScript**
+- **Vite** (build tool / dev server)
+- **Tailwind CSS**
+- **Firebase Authentication**
+- **Recharts** (savings growth chart)
+
+## Run Locally
+
+**Prerequisites:** Node.js
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env` file in the project root (see `.env.example` for the required variable names) and add your own Gemini API key:
+   ```
+   GEMINI_API_KEY="your_key_here"
+   APP_URL="http://localhost:3000"
+   ```
+3. Run the app:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── components/   # UI screens and components
+├── context/      # App-level state (React Context)
+├── App.tsx
+├── main.tsx
+└── types.ts
+```
