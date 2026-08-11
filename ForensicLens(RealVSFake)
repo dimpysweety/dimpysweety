@@ -1,0 +1,48 @@
+# Forensics Lens
+
+Forensics Lens is an image analysis tool that examines an uploaded image and produces a detailed forensic breakdown of whether it's real or AI-generated — including a verdict, highlighted regions of interest, and the reasoning behind the assessment, powered by the Gemini API.
+
+## Features
+
+- Upload an image for analysis
+- Real vs. AI-generated verdict
+- Highlighted regions flagged as suspicious or inconsistent
+- Detailed reasoning/explanation behind the assessment, not just a raw label
+
+## Tech Stack
+
+- **React** + **TypeScript**
+- **Vite**
+- **Express** (Node server, handles Gemini API calls server-side)
+- **Tailwind CSS**
+- **Google Gemini API** (`@google/genai`)
+
+## Run Locally
+
+**Prerequisites:** Node.js
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Create a `.env` file in the project root (see `.env.example` for the required variable names) and add your own Gemini API key:
+   ```
+   GEMINI_API_KEY="your_key_here"
+   ```
+3. Run the app:
+   ```bash
+   npm run dev
+   ```
+4. Open the local URL shown in your terminal.
+
+## Project Structure
+
+```
+src/
+├── components/   # UI screens and components
+├── data/         # Static/reference data
+├── App.tsx
+├── main.tsx
+└── types.ts
+server.ts         # Express server, handles Gemini API requests
+```
